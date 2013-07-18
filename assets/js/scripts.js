@@ -34,6 +34,19 @@ jQuery(document).ready(function() {
             $("a[rel^='prettyPhoto']").prettyPhoto({social_tools: false});
         });
     });
+
+    $(".whale-watch").click(function() {
+        $('#whale-watch-Modal').modal('show');
+    });
+    $(".shark-cage").click(function() {
+        $('#shark-Modal').modal('show');
+    });
+    $(".fishing").click(function() {
+        $('#fishing-Modal').modal('show');
+    });
+    $(".kayaking").click(function() {
+        $('#kayaking-Modal').modal('show');
+    });
 });
 
 
@@ -48,25 +61,25 @@ jQuery(document).ready(function() {
 /*
     Show latest tweets
 */
-jQuery(function($) {
-    $(".show-tweets").tweet({
-        username: "anli_zaimi",
-        page: 1,
-        count: 10,
-        loading_text: "loading ..."
-    }).bind("loaded", function() {
-        var ul = $(this).find(".tweet_list");
-        var ticker = function() {
-            setTimeout(function() {
-                ul.find('li:first').animate( {marginTop: '-4em'}, 500, function() {
-                    $(this).detach().appendTo(ul).removeAttr('style');
-                });
-                ticker();
-            }, 5000);
-        };
-        ticker();
-    });
-});
+// jQuery(function($) {
+//     $(".show-tweets").tweet({
+//         username: "anli_zaimi",
+//         page: 1,
+//         count: 10,
+//         loading_text: "loading ..."
+//     }).bind("loaded", function() {
+//         var ul = $(this).find(".tweet_list");
+//         var ticker = function() {
+//             setTimeout(function() {
+//                 ul.find('li:first').animate( {marginTop: '-4em'}, 500, function() {
+//                     $(this).detach().appendTo(ul).removeAttr('style');
+//                 });
+//                 ticker();
+//             }, 5000);
+//         };
+//         ticker();
+//     });
+// });
 
 
 /*
