@@ -8,7 +8,6 @@
  *
  */
 
-
 body {
     background: #fff;
     text-align: center;
@@ -32,6 +31,15 @@ a:hover { color: #888; text-decoration: none; }
 
 strong { font-weight: bold; }
 
+.readmore{ 
+    display: none;
+}
+.readmore:hover {
+    cursor: pointer;
+}
+.service:hover .readmore{
+    display : block;
+}
 
 /* ----- Header ----- */
 
